@@ -7,18 +7,7 @@ const { Category, Product } = require('../../models');
 router.get('/', async (req, res) => {
   try {
     const categoryData = await Category.findAll({
-      include: [{ model: Product }],
-      // attributes: {
-      //   include: [
-      //     [
-      //       // Use plain SQL to get related products
-      //       sequelize.literal(
-      //         '(SELECT product_name FROM product WHERE product.category_id = Category.id)'
-      //       ),
-      //       'procucts',
-      //     ],
-      //   ],
-      // },
+      include: [{ model: Product }],      
     });
     res.status(200).json(categoryData);
   } catch (err) {
@@ -48,7 +37,7 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
   try {
-    const catecategoryDatagory = await Category.update(
+    const categoryData = await Category.update(
     {
       category_name: req.body.category_name,      
     },
@@ -56,8 +45,7 @@ router.put('/:id', async (req, res) => {
       where: {
         id: req.params.id,
       },
-    });
-    // TODO: If the database is updated successfully, what happens to the updated data below?
+    });    
     res.status(200).json(categoryData);
   } catch (err) {
       res.status(500).json(err);
@@ -72,7 +60,7 @@ router.delete('/:id', async (req, res) => {
       },
     });
 
-    if (!readerData) {
+    if (!categoryData) {
       res.status(404).json({ message: 'No reader found with that id!' });
       return;
     }
