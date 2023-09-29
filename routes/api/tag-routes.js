@@ -1,9 +1,9 @@
-const router = require('express').Router();
-const sequelize = require('../../config/connection');
-const { Tag, Product, ProductTag } = require('../../models');
+const router = require('express').Router();//Router
+const { Tag, Product, ProductTag } = require('../../models');//Import Models
 
 // The `/api/tags` endpoint
 
+// get all Tags
 router.get('/', async(req, res) => {
   try {
     const tagData = await Tag.findAll({
@@ -16,6 +16,7 @@ router.get('/', async(req, res) => {
   }
 });
 
+// get one Tag
 router.get('/:id', async (req, res) => {
   try {
     const tagData = await Tag.findByPk(req.params.id, {
@@ -27,6 +28,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+// create new Tag
 router.post('/', async (req, res) => {
   try {
     const tagData = await Tag.create(req.body);
@@ -36,6 +38,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+// update Tag
 router.put('/:id', async(req, res) => {
   try {
     const tagData = await Tag.update(
@@ -53,6 +56,7 @@ router.put('/:id', async(req, res) => {
     };
 });
 
+// delete Tag
 router.delete('/:id', async (req, res) => {
   try {
     const tagData = await Tag.destroy({

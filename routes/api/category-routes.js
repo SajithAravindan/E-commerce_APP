@@ -1,9 +1,9 @@
-const router = require('express').Router();
-const sequelize = require('../../config/connection');
-const { Category, Product } = require('../../models');
+const router = require('express').Router();//Router
+const { Category, Product } = require('../../models');//Import Models
 
 // The `/api/categories` endpoint
 
+// get all Categories
 router.get('/', async (req, res) => {
   try {
     const categoryData = await Category.findAll({
@@ -15,6 +15,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+// get One Categories
 router.get('/:id', async (req, res) => {
   try {
     const categoryData = await Category.findByPk(req.params.id, {
@@ -26,6 +27,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+// Create Category
 router.post('/', async (req, res) => {
   try {
     const categoryData = await Category.create(req.body);
@@ -35,6 +37,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+// Update Category
 router.put('/:id', async (req, res) => {
   try {
     const categoryData = await Category.update(
@@ -52,6 +55,7 @@ router.put('/:id', async (req, res) => {
     };
 });
 
+// Delete Category
 router.delete('/:id', async (req, res) => {
   try {
     const categoryData = await Category.destroy({
