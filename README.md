@@ -1,7 +1,7 @@
 # E-commerce Application
 
 ## Description
-This is a command-line content management systems (CMS) application to manage a company's employee Details. This application will enable  non-developers to easily manage and interact with information stored in databases.
+This command-line application is the back end for an e-commerce site. It allows the user to manage the application as it integrates with the front application by providing required rest ens points.
 
 User Story & Acceptance Criteria follow the AS AN / I WANT / SO THAT format.
 
@@ -13,15 +13,9 @@ User Story & Acceptance Criteria follow the AS AN / I WANT / SO THAT format.
    * [Acceptance Criteria](#Acceptance-Criteria)
   
    * [Technologies Used](#Technologies-Used) 
-  
-   * [Usage](#Usage) 
-
-   * [Installation](#Installation) 
 
    * [Demo](#Demo) 
 
-   * [Review](#Review) 
-  
    * [License](#license) 
 
 
@@ -50,48 +44,6 @@ GIVEN a functional Express.js API
 ## Technologies Used
 Node.js, Express.js, Sequelize and MySQL.
 
-
-## Usage
-A command-line application that at a minimum allows the user to:
-
-* Add 
-    *  departments
-    *  roles
-    *  employees
-* View 
-    *  departments
-    *  roles
-    *  employees
-    *  employees by manager
-    *  employees by department
-    *  total utilized budget of a department
-* Update 
-    *  employee's roles
-    *  employee's managers
-* Delete 
-    *  departments
-    *  roles
-    *  employees
-
-
-## Installation
-* This application need node.js, please refer to [offical website](https://nodejs.org/en/download/) for installation
-* download this repo by running
-    ```bash
-    git clone https://github.com/SajithAravindan/Employee-Tracker_NjEjMS.git
-    ```
-* This application also need to install mysql on your computer, please refer to [mysql website](https://www.mysql.com/downloads/) for installation
-* Change connection credentials in ```connection.js``` to your root/user/password of your mysql DBMS.
-* install required node pacakges by running
-    ```bash
-    npm install
-    ```
-* Create schema of database tables by running all the queries in ```schema.sql```
-* Set up test records yourself or run queries in ```seed.sql```
-* start the application by running
-    ```
-    node index
-    ```
   
 ## Demo
 
@@ -102,7 +54,7 @@ Demo Video Link: https://drive.google.com/file/d/1ZFNPltmG4_qYzewmWywe_d9tOJ1Gy1
 
 
 ## License
-* Please refer to the LICENSE in the repo. <a href="https://github.com/SajithAravindan/readme-generator-NJS/blob/main/LICENSE">(MIT License)</a>
+* Please refer to the LICENSE in the repo. <a href="https://github.com/SajithAravindan/E-commerce_APP/blob/main/LICENSE">(MIT License)</a>
 
 
 ---
