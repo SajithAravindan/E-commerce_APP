@@ -47,10 +47,10 @@ Node.js, Express.js, Sequelize and MySQL.
   
 ## Demo
 
-[![Watch the video](./imgs/demo.jpg)](https://drive.google.com/file/d/1ZFNPltmG4_qYzewmWywe_d9tOJ1Gy1UR/view)
+[![Watch the video](./imgs/demo.jpg)](https://drive.google.com/file/d/1MuLlWazhDAwvh-jc_8EOcJwFuNNzAOLJ/view)
 
 
-Demo Video Link: https://drive.google.com/file/d/1ZFNPltmG4_qYzewmWywe_d9tOJ1Gy1UR/view
+Demo Video Link: https://drive.google.com/file/d/1MuLlWazhDAwvh-jc_8EOcJwFuNNzAOLJ/view
 
 
 ## License
